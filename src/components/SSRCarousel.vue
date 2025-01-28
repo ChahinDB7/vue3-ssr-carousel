@@ -239,6 +239,11 @@ const props = defineProps({
     type: Number,
     default: 3,
   },
+
+  offsetLastSlide: {
+    type: Number,
+    default: 2
+  }
 })
 
 const emit = defineEmits([
@@ -394,7 +399,7 @@ const trackTranslateX = computed(() => {
   const offset = currentX.value + trackLoopOffset.value + peekLeftPx.value
 
   if (isAtLastSlide.value) {
-    return offset - 2
+    return offset - props.offsetLastSlide
   }
 
   return offset
