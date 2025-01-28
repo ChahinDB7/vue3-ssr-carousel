@@ -243,7 +243,12 @@ const props = defineProps({
   offsetLastSlide: {
     type: Number,
     default: 2
-  }
+  },
+
+  endless: {
+    type: Boolean,
+    default: true,
+  },
 })
 
 const emit = defineEmits([

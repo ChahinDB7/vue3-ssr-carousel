@@ -1,6 +1,6 @@
 {
   "name": "@chahindb7/vue3-ssr-carousel",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A performance focused Vue carousel designed for SSR/SSG environments. (modified by Chahin).",
   "type": "module",
   "main": "dist/vue3-ssr-carousel.umd.js",

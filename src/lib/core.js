@@ -925,6 +925,7 @@ export function useCore({ carousel, track, mask, peekValues, emit, props, slots,
     } else {
       if (isOutOfBounds.value && !shouldLoop.value) {
         if (currentX.value >= 0) gotoStart();
+        else if (props.endless && currentX.value < 0) gotoStart()
         else gotoEnd();
       } else if (isVariableWidth.value) {
         tweenToStop();
@@ -933,6 +934,7 @@ export function useCore({ carousel, track, mask, peekValues, emit, props, slots,
       } else {
         goto(dragIndex.value);
       }
+
       dragging.value = false;
       startPointer.value = lastPointer.value = dragDirectionRatio.value = null;
       emit('release');
